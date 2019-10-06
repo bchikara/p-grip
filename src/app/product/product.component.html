@@ -1,0 +1,247 @@
+<app-header></app-header>
+<section class="page_breadcrumbs ds color parallax section_padding_top_75 section_padding_bottom_75">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h2 class="text-uppercase">Products</h2>
+                <ol class="breadcrumb highlightlinks">
+                    <li> <a routerLink="/">
+                Home
+            </a> </li>
+                    <!-- <li> <a>Shop</a> </li> -->
+                    <li class="active">Products</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="ls section_padding_top_130 section_padding_bottom_130 columns_padding_25">
+    <div class="container">
+        <div class="row">
+          
+            <div class="col-sm-7 col-md-8 col-lg-8 col-sm-push-5 col-md-push-4 col-lg-push-4">
+                <div class="shop-sorting clearfix">
+                        
+
+                            <div class="shop-sorting clearfix">
+                                    <form class="form-inline content-justify vertical-center"> <span class="inline-content bottommargin_10">							
+                                <a id="toggle_shop_view" class=""></a>
+    
+                                <span *ngIf="products" class="fontsize_16">Showing {{products.length}} results</span> </span>
+                                        <div class="bottommargin_10">
+                                                <div class="widget widget_search bottommargin_10">
+                                                        <form class="searchform">
+                                                            <div class="form-group" (click)="clearQuery()"> <label class="sr-only" for="widget-search">Search for:</label> <input #query (keyup)="filter(query.value)" id="widget-search" type="text" value="" name="search" class="form-control" placeholder="Search Here..."> </div> <button type="submit" class="theme_button color1">Search</button>									</form>
+                                                    </div> </div>
+                                    </form>
+                                </div>
+                    <!-- <form class="form-inline content-justify vertical-center"> <span class="inline-content bottommargin_10">							
+                <a id="toggle_shop_view" class=""></a> -->
+
+                <!-- <span class="fontsize_16">Showing 1-9 of 18 results</span> </span> -->
+                        <!-- <div class="bottommargin_10"> -->
+                            <!-- <div class="form-group select-group"> <label for="category" class="sr-only">Select Category</label> <select id="category" name="category" class="choice empty form-control">
+                        <option value="" disabled="" selected="" data-default="">Default sorting</option>
+                        <option value="cat_1">Newest</option>
+                        <option value="cat_2">Price Up</option>
+                        <option value="cat_3">Price Down</option>
+                    </select> <i class="fa fa-angle-down theme_button color1" aria-hidden="true"></i> </div>
+                        </div>
+                    </form> -->
+                </div>
+                <div class="columns-2">
+                    <ul id="products" class="products list-unstyled grid-view bottommargin_0">
+                       <div *ngFor="let product of products;let i=index">
+                           <li *ngIf="(i%2==0)" class="product type-product">
+                               <div class="side-item no-content-padding with_border content-padding">
+                                   <div class="row">
+                                       <div class="col-md-5">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                       <img src="assets/images/shop/01.png" alt="">
+                                   </a>
+                                               <div class="entry-meta-corner main_bg_color2"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                           </div>
+                                           <div style="height:200px" class="item-content text-center">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlight2links"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                   <strong class="rating">4.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>
+                                               
+                                           </div>
+                                       </div>
+                                       <div class="col-md-7">
+                                           <div class="item-content">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlight2links"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                   <strong class="rating">4.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>
+                                               
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li *ngIf="(i%3==0 && i%2!=0)" class="product type-product">
+                               <div class="side-item no-content-padding with_border content-padding">
+                                   <div class="row">
+                                       <div class="col-md-5">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                       <img src="assets/images/shop/02.png" alt="">
+                                   </a>
+                                               <div class="entry-meta-corner main_bg_color"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                           </div>
+                                           <div style="height:200px" class="item-content text-center">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlightlinks"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 3.00 out of 5"> <span style="width:60%">
+                                                   <strong class="rating">3.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                               
+                                           </div>
+                                       </div>
+                                       <div class="col-md-7">
+                                           <div class="item-content">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlightlinks"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 3.00 out of 5"> <span style="width:60%">
+                                                   <strong class="rating">3.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                               
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li *ngIf="(i%5==0 && i%3!=0 && i%2!=0)" class="product type-product">
+                               <div class="side-item no-content-padding with_border content-padding">
+                                   <div class="row">
+                                       <div class="col-md-5">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                       <img src="assets/images/shop/03.png" alt="">
+                                   </a>
+                                               <div class="entry-meta-corner main_bg_color3"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                           </div>
+                                           <div style="height:200px" class="item-content text-center">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlight3links"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                   <strong class="rating">4.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                               
+                                           </div>
+                                       </div>
+                                       <div class="col-md-7">
+                                           <div class="item-content">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlight3links"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                   <strong class="rating">4.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                               
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                           <li *ngIf="(i%2!=0 && i%3!=0 && i%5!=0)" class="product type-product">
+                               <div class="side-item no-content-padding with_border content-padding">
+                                   <div class="row">
+                                       <div class="col-md-5">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                       <img src="assets/images/shop/04.png" alt="">
+                                   </a>
+                                               <div class="entry-meta-corner main_bg_color6"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                           </div>
+                                           <div style="height:200px" class="item-content text-center">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlight6links"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 2.00 out of 5"> <span style="width:40%">
+                                                   <strong class="rating">2.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                               
+                                           </div>
+                                       </div>
+                                       <div class="col-md-7">
+                                           <div class="item-content">
+                                               <div class="content-justify">
+                                                   <div class="small-text big highlight6links"> <a>{{product.category}}</a> </div>
+                                                   <div>
+                                                       <div class="star-rating right-rating" title="Rated 2.00 out of 5"> <span style="width:40%">
+                                                   <strong class="rating">2.00</strong> out of 5
+                                               </span> </div>
+                                                   </div>
+                                               </div>
+                                               <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                               
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </li>
+                       </div>
+                    </ul>
+                </div>
+                <!-- eof .columns-* -->
+                
+            </div>
+            
+            <!--eof .col-sm-8 (main content)-->
+            <!-- sidebar -->
+            <aside class="col-sm-5 col-md-4 col-lg-4 col-sm-pull-7 col-md-pull-8 col-lg-pull-8">
+                    <!-- <div class="widget widget_search">
+                        <h3 class="widget-title">Search</h3>
+                        <form method="get" class="searchform">
+                            <div class="form-group"> <label class="sr-only" for="widget-search">Search for:</label> <input id="widget-search" type="text" value="" name="search" class="form-control" placeholder="Search Here..."> </div> <button type="submit" class="theme_button color1">Search</button>									</form>
+                    </div> -->
+                    <div class="widget widget_categories">
+                        <h3 class="widget-title">Categories</h3>
+                        <ul class="greylinks list2 checklist">
+                            <li *ngFor="let c of categories"  [class.active]="category == c.name"> 
+                                <a routerLink="/product" [queryParams]="{category:c.name}" title="" class="content-justify">
+                              <span>{{c.name}}</span><span></span>
+                         </a> </li>
+                        </ul>
+                    </div>
+                </aside>
+            <!-- eof aside sidebar -->
+        </div>
+    </div>
+</section>

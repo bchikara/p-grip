@@ -1,64 +1,219 @@
 <app-header></app-header>
 <section class="page_breadcrumbs ds color parallax section_padding_top_75 section_padding_bottom_75">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center">
-                <h2 class="text-uppercase">Single Service</h2>
-                <ol class="breadcrumb highlightlinks">
-                    <li> <a routerLink="/">
-                Home
-            </a> </li>
-                    <!-- <li> <a href="#">Pages</a> </li> -->
-                    <li class="active">Single Service</li>
-                </ol>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="ls section_padding_top_130 section_padding_bottom_130 columns_padding_25">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-7 col-md-8 col-lg-8 col-sm-push-5 col-md-push-4 col-lg-push-4">
-                <article class="single-post vertical-item content-padding big-padding with_border rounded post">
-                    <div class="entry-thumbnail item-media bottommargin_40"> <img src="assets/images/gallery/09.jpg" alt=""> </div>
-                    <div class="item-content">
-                        <header class="entry-header">
-                            <h1 *ngIf="product" class="entry-title text-uppercase topmargin_0">{{product.name}}</h1>
-                        </header>
-                        <!-- .entry-header -->
-                        <div class="entry-content">
-                            <p>Rump tongue salami beef meatloaf doner. Sirloin burgdoggen pastrami, ground round brisket t-bone boudin biltong pork belly leberkas. Ham bresaola tenderloin shank. Ham salami kevin beef rump filet mignon sirloin tail sausage capicola venison
-                                short loin brisket pancetta pork chop. Ham hock andouille strip steak chuck turducken cow. Ham hock porchetta pastrami flank, tongue jerky pork belly leberkas.</p>
-                            <p>Leberkas venison sirloin andouille, drumstick filet mignon boudin hamburger pastrami pork chop ribeye bresaola ball tip. Alcatra turducken flank sirloin beef t-bone venison ball tip cow. Porchetta kevin hamburger chuck. Porchetta doner drumstick,
-                                short ribs ham hock short loin salami filet mignon jowl pork chop swine bresaola cow picanha. Jowl venison swine corned beef.</p>
-                            <ul class="list2 color3 checklist">
-                                <li>Brisket doner meatloaf turducke</li>
-                                <li>Pancetta landjaeger alcatra groun</li>
-                                <li>Round pork turkey boudin shank</li>
-                                <li>Round pork turkey boudin shank</li>
-                            </ul>
-                            <p>Shoulder turducken andouille hamburger chicken. Short loin chuck fatback rump short ribs pancetta brisket ball tip capicola strip steak t-bone bresaola landjaeger ribeye. Bresaola pork belly ball tip spare ribs flank kielbasa drumstick porchetta
-                                turkey pork loin doner sausage.</p>
-                        </div>
-                        <!-- .entry-content -->
-                    </div>
-                    <!-- .item-content -->
-                </article>
-            </div>
-            <!--eof .col-sm-8 (main content)-->
-            <!-- sidebar -->
-            <aside class="col-sm-5 col-md-4 col-lg-4 col-sm-pull-7 col-md-pull-8 col-lg-pull-8">
-                <div class="widget text">
-                    <h3 class="widget-title">Navigation</h3>
-                    <ul class="list2 checklist greylinks">
-                        <li class=""> <a href="#">Electric Tools</a> </li>
-                        <li class=""> <a href="#">Measurement Equipment</a> </li>
-                        <li class=""> <a href="#">Power Electric Equpment</a> </li>
-                        <li class=""> <a href="#">Frankfurter Salami</a> </li>
-                    </ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h2 class="text-uppercase">Single Product</h2>
+                    <ol class="breadcrumb highlightlinks">
+                        <li> <a routerLink="/">
+                    Home
+                </a> </li>
+                        <li> <a routerLink="/product">Shop</a> </li>
+                        <li class="active">Single Product</li>
+                    </ol>
                 </div>
-            </aside>
-            <!-- eof aside sidebar -->
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+    <section class="ls section_padding_top_130 section_padding_bottom_130 columns_padding_25">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div itemscope="" itemtype="http://schema.org/Product" class="product type-product row columns_padding_25">
+                        <div class="col-sm-6">
+                            <div class="item-media images muted_background text-center rounded overflow_hidden"> <a href="assets/images/shop/04.png" itemprop="image" class="woocommerce-main-image zoom prettyPhoto" data-gal="prettyPhoto[product-gallery]">
+                        <img src="assets/images/shop/04.png" class="attachment-shop_single wp-post-image" alt="" title="">
+                    </a>
+                                <div class="entry-meta-corner main_bg_color"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
+                            </div>
+                            <!--eof .images -->
+                            <!-- <div class="thumbnails-wrap">
+                                <div id="product-thumbnails" class="owl-carousel thumbnails product-thumbnails" data-loop="true" data-margin="10" data-nav="false" data-dots="true" data-items="5" data-responsive-lg="5" data-responsive-md="4" data-responsive-sm="3" data-responsive-xs="2">
+                                <a href="assets/images/shop/02.png" class="zoom first muted_background " title="" data-gal="prettyPhoto[product-gallery]">
+                            <img src="assets/images/shop/02.png" class="attachment-shop_thumbnail" alt="">
+                        </a> <a href="assets/images/shop/03.png" class="zoom first muted_background " title="" data-gal="prettyPhoto[product-gallery]">
+                            <img src="assets/images/shop/03.png" class="attachment-shop_thumbnail" alt="">
+                        </a> <a href="assets/images/shop/04.png" class="zoom first muted_background " title="" data-gal="prettyPhoto[product-gallery]">
+                            <img src="assets/images/shop/04.png" class="attachment-shop_thumbnail" alt="">
+                        </a> </div>
+                            </div> -->
+                            <!-- eof .images -->
+                        </div>
+                        <div class="summary entry-summary col-sm-6">
+                            <div class="content-justify vertical-center">
+                                <div class="small-text big highlight2links"> <a href="#">Drills</a> </div>
+                                <div>
+                                    <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                <strong class="rating">4.00</strong> out of 5
+                            </span> </div>
+                                </div>
+                            </div>
+                            <h1 itemprop="name" class="product_title text-uppercase topmargin_0">{{product[0].name}}</h1>
+                            <div>
+                                <p>Capicola jerky tongue, burgdoggen drumstick chuck ground round picanha beef bacon ribeye leberkas. Turkey ham andouille strip steak burgdoggen beef ribs. Capicola tenderloin salami chuck cupim turducken, doner pig ribeye meatball hamburger prosciutto.
+                                    </p>
+                            </div>
+                            <div class="row product_meta small-text big greylinks">
+                                <div class="col-sm-6"> <span class="posted_in">
+                            <span>Categories:</span> <span class="categories-links">
+                                <a href="">{{product[0].category}}</a>
+                            </span> </span>
+                                </div>
+                                <!-- <div class="col-sm-6"> <span class="posted_in">
+                            <span>Tegs:</span> <span class="categories-links">
+                                <a href="">Electric Tools</a>,
+                                <a href="">Drills</a>
+                            </span> </span>
+                                </div> -->
+                            </div>
+                            <hr class="divider_30">
+                            <ul class="list2 color3 checklist">
+                                    <li>Brisket doner meatloaf turducke</li>
+                                    <li>Pancetta landjaeger alcatra groun</li>
+                                    <li>Round pork turkey boudin shank</li>
+                                    <li>Round pork turkey boudin shank</li>
+                                </ul>
+
+                            <!-- <form class="cart topmargin_50" method="post" enctype="multipart/form-data">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4 class="text-uppercase">Color:</h4>
+                                        <div class="form-group select-group"> <select id="category" name="category" class="choice empty form-control">
+                                    <option value="" disabled="" selected="" data-default="">Show all</option>
+                                    <option value="cat_1">Black</option>
+                                    <option value="cat_2">Blue</option>
+                                    <option value="cat_3">Pink</option>
+                                </select> <i class="fa fa-angle-down theme_button color1 no_bg_button" aria-hidden="true"></i> </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h4 class="text-uppercase">Size:</h4>
+                                        <div class="form-group select-group"> <select id="size" name="category" class="choice empty form-control">
+                                    <option value="" disabled="" selected="" data-default="">Show all</option>
+                                    <option value="cat_1">S</option>
+                                    <option value="cat_2">M</option>
+                                    <option value="cat_3">L</option>
+                                    <option value="cat_3">XL</option>
+                                </select> <i class="fa fa-angle-down theme_button color1 no_bg_button" aria-hidden="true"></i> </div>
+                                    </div>
+                                </div>
+                                <hr class="divider_30 topmargin_40">
+                                <div class="row greylinks">
+                                    <div class="col-sm-6"> <a href="#0" class="small-text big">
+                                <i class="fa fa-list-alt highlight rightpadding_10" aria-hidden="true"></i>
+                                Add to wishlist
+                            </a> </div>
+                                    <div class="col-sm-6 small-icons"> <span class="small-text big rightpadding_10">Share:</span> <a class="social-icon soc-facebook" href="#" title="Facebook"></a> <a class="social-icon soc-twitter" href="#" title="Twitter"></a> <a class="social-icon soc-google" href="#" title="Google"></a>												<a class="social-icon soc-youtube" href="#" title="Youtube"></a> </div>
+                                </div>
+                                <hr class="divider_30 bottommargin_40"> <span class="quantity form-group rightmargin_10">
+                        <input type="button" value="+" class="plus">
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                        <input type="number" step="1" min="0" name="product_quantity" value="1" title="Qty" id="product_quantity" class="form-control ">
+                        <input type="button" value="-" class="minus">
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </span> <a href="#" rel="nofollow" class="theme_button color1 wide_button add_to_cart_button">
+                        Add to cart
+                    </a> </form> -->
+                        </div>
+                        <!-- .summary.col- -->
+                    </div>
+                    <!-- .product.row -->
+                    <!-- <div class="row topmargin_50">
+                        <div class="col-sm-12">
+                            <h3 class="text-center text-uppercase">Related products</h3>
+                            <div class="owl-carousel topmargin_30" data-dots="false" data-loop="true" data-autoplay="true" data-responsive-lg="3">
+                                <div class="vertical-item with_border content-padding product text-center">
+                                    <div class="item-media muted_background rounded overflow_hidden"> <a href="shop-product-right.html">
+                                        <img src="assets/images/shop/01.png" alt="">
+                                    </a>
+                                        <div class="entry-meta-corner main_bg_color2"> <span class="value">55</span> <span class="small-text big-spacing">eur</span> </div>
+                                    </div>
+                                    <div class="item-content text-center">
+                                        <div class="content-justify">
+                                            <div class="small-text big highlight2links"> <a href="#">Drills</a> </div>
+                                            <div>
+                                                <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                    <strong class="rating">4.00</strong> out of 5
+                                                </span> </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="entry-title topmargin_10 hover-color2"> <a href="shop-product-right.html">Doner Strip Steak 2369</a> </h4>
+                                        <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>
+                                        <p class="topmargin_25 small-text big highlight2links"> <a href="#" rel="nofollow">
+                                            Add To Cart
+                                        </a> </p>
+                                    </div>
+                                </div>
+                                <div class="vertical-item with_border content-padding text-center">
+                                    <div class="item-media muted_background rounded overflow_hidden"> <a href="shop-product-right.html">
+                                        <img src="assets/images/shop/02.png" alt="">
+                                    </a>
+                                        <div class="entry-meta-corner main_bg_color"> <span class="value">99</span> <span class="small-text big-spacing">eur</span> </div>
+                                    </div>
+                                    <div class="item-content text-center">
+                                        <div class="content-justify">
+                                            <div class="small-text big highlightlinks"> <a href="#">sanders</a> </div>
+                                            <div>
+                                                <div class="star-rating right-rating" title="Rated 3.00 out of 5"> <span style="width:60%">
+                                                    <strong class="rating">3.00</strong> out of 5
+                                                </span> </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="entry-title topmargin_10"> <a href="shop-product-right.html">Chuck Corned FG-00</a> </h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                        <p class="topmargin_25 small-text big highlightlinks"> <a href="#" rel="nofollow">
+                                            Add To Cart
+                                        </a> </p>
+                                    </div>
+                                </div>
+                                <div class="vertical-item with_border content-padding text-center">
+                                    <div class="item-media muted_background rounded overflow_hidden"> <a href="shop-product-right.html">
+                                        <img src="assets/images/shop/03.png" alt="">
+                                    </a>
+                                        <div class="entry-meta-corner main_bg_color3"> <span class="value">121</span> <span class="small-text big-spacing">eur</span> </div>
+                                    </div>
+                                    <div class="item-content text-center">
+                                        <div class="content-justify">
+                                            <div class="small-text big highlight3links"> <a href="#">rivet guns</a> </div>
+                                            <div>
+                                                <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                    <strong class="rating">4.00</strong> out of 5
+                                                </span> </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="entry-title topmargin_10 hover-color3"> <a href="shop-product-right.html">Sirloin GT890 Fielbasa</a> </h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                        <p class="topmargin_25 small-text big highlight3links"> <a href="#" rel="nofollow">
+                                            Add To Cart
+                                        </a> </p>
+                                    </div>
+                                </div>
+                                <div class="vertical-item with_border content-padding product text-center">
+                                    <div class="item-media muted_background rounded overflow_hidden"> <a href="shop-product-right.html">
+                                        <img src="assets/images/shop/04.png" alt="">
+                                    </a>
+                                        <div class="entry-meta-corner main_bg_color6"> <span class="value">121</span> <span class="small-text big-spacing">eur</span> </div>
+                                    </div>
+                                    <div class="item-content text-center">
+                                        <div class="content-justify">
+                                            <div class="small-text big highlight6links"> <a href="#">Hose Reels</a> </div>
+                                            <div>
+                                                <div class="star-rating right-rating" title="Rated 2.00 out of 5"> <span style="width:40%">
+                                                    <strong class="rating">2.00</strong> out of 5
+                                                </span> </div>
+                                            </div>
+                                        </div>
+                                        <h4 class="entry-title topmargin_10 hover-color6"> <a href="shop-product-right.html">Turducken 3900</a> </h4>
+                                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
+                                        <p class="topmargin_25 small-text big highlight6links"> <a href="#" rel="nofollow">
+                                            Add To Cart
+                                        </a> </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <!--eof .col-sm-8 (main content)-->
+            </div>
+        </div>
+    </section>

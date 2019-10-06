@@ -14,7 +14,7 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {path:'',component:HomepageComponent},
   {path:'product',component:ProductComponent},
-  {path:'product-details/:id',component:ProductDetailsComponent},
+  {path:'product-details',component:ProductDetailsComponent},
   {path:'team',component:TeamComponent},
   {path:'gallery',component:GalleryComponent},
   {path:'faq',component:FaqComponent},

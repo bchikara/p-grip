@@ -4,6 +4,7 @@ import { ProductComponent } from './product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -12,7 +13,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     CoreModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ]
 })
 export class ProductModule { }

@@ -16,11 +16,10 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit() {
     
-    this.productId= this.route.snapshot.paramMap.get('id');
-    
+    this.route.queryParamMap.subscribe(p=>{this.productId=p.get('value')});
+    console.log(this.productId)
     this.product=this.productService.getProduct(this.productId);
-
-
+    console.log(this.product[0].name)
     "use strict";
     //Wrapping all JavaScript code into a IIFE function for prevent global variables creation
     
@@ -1243,6 +1242,6 @@ export class ProductDetailsComponent implements OnInit {
         
   }
 
-  
+
 
 }

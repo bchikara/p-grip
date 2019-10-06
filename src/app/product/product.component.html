@@ -56,23 +56,22 @@
                                <div class="side-item no-content-padding with_border content-padding">
                                    <div class="row">
                                        <div class="col-md-5">
-                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
                                        <img src="assets/images/shop/01.png" alt="">
                                    </a>
-                                               <div class="entry-meta-corner main_bg_color2"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                               <div class="entry-meta-corner main_bg_color2"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
-                                           <div style="height:200px" class="item-content text-center">
+                                           <div style="height:250px" class="item-content text-center">
                                                <div class="content-justify">
                                                    <div class="small-text big highlight2links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                       <!-- <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
                                                    <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                               </span> </div> -->
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
-                                               <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>
-                                               
+                                               <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
+                                               <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>                                     
                                            </div>
                                        </div>
                                        <div class="col-md-7">
@@ -80,12 +79,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlight2links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                       <!-- <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
                                                    <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                               </span> </div> -->
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>
                                                
                                            </div>
@@ -97,21 +96,21 @@
                                <div class="side-item no-content-padding with_border content-padding">
                                    <div class="row">
                                        <div class="col-md-5">
-                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
                                        <img src="assets/images/shop/02.png" alt="">
                                    </a>
-                                               <div class="entry-meta-corner main_bg_color"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                               <div class="entry-meta-corner main_bg_color"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
-                                           <div style="height:200px" class="item-content text-center">
+                                           <div style="height:250px" class="item-content text-center">
                                                <div class="content-justify">
                                                    <div class="small-text big highlightlinks"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 3.00 out of 5"> <span style="width:60%">
-                                                   <strong class="rating">3.00</strong> out of 5
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:60%">
+                                                   <strong class="rating">4.00</strong> out of 5
                                                </span> </div>
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                                
                                            </div>
@@ -121,12 +120,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlightlinks"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 3.00 out of 5"> <span style="width:60%">
-                                                   <strong class="rating">3.00</strong> out of 5
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:60%">
+                                                   <strong class="rating">4.00</strong> out of 5
                                                </span> </div>
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                                
                                            </div>
@@ -138,21 +137,21 @@
                                <div class="side-item no-content-padding with_border content-padding">
                                    <div class="row">
                                        <div class="col-md-5">
-                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
                                        <img src="assets/images/shop/03.png" alt="">
                                    </a>
-                                               <div class="entry-meta-corner main_bg_color3"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                               <div class="entry-meta-corner main_bg_color3"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
-                                           <div style="height:200px" class="item-content text-center">
+                                           <div style="height:250px" class="item-content text-center">
                                                <div class="content-justify">
                                                    <div class="small-text big highlight3links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                       <!-- <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
                                                    <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                               </span> </div> -->
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                                
                                            </div>
@@ -162,12 +161,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlight3links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
+                                                       <!-- <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
                                                    <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                               </span> </div> -->
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                                
                                            </div>
@@ -179,21 +178,21 @@
                                <div class="side-item no-content-padding with_border content-padding">
                                    <div class="row">
                                        <div class="col-md-5">
-                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details/{{i}}">
+                                           <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
                                        <img src="assets/images/shop/04.png" alt="">
                                    </a>
-                                               <div class="entry-meta-corner main_bg_color6"> <span class="value"></span> <span class="small-text big-spacing">₹</span> </div>
+                                               <div class="entry-meta-corner main_bg_color6"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
-                                           <div style="height:200px" class="item-content text-center">
+                                           <div style="height:250px" class="item-content text-center">
                                                <div class="content-justify">
                                                    <div class="small-text big highlight6links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 2.00 out of 5"> <span style="width:40%">
-                                                   <strong class="rating">2.00</strong> out of 5
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:40%">
+                                                   <strong class="rating">4.00</strong> out of 5
                                                </span> </div>
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                                
                                            </div>
@@ -203,12 +202,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlight6links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 2.00 out of 5"> <span style="width:40%">
-                                                   <strong class="rating">2.00</strong> out of 5
+                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:40%">
+                                                   <strong class="rating">4.00</strong> out of 5
                                                </span> </div>
                                                    </div>
                                                </div>
-                                               <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details/{{i}}">{{product.name}}</a> </h4>
+                                               <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
                                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
                                                
                                            </div>
@@ -234,6 +233,10 @@
                     <div class="widget widget_categories">
                         <h3 class="widget-title">Categories</h3>
                         <ul class="greylinks list2 checklist">
+                                <li [class.active]="category == null"> 
+                                        <a routerLink="/product" title="" class="content-justify">
+                                      <span>All Products</span><span></span>
+                                 </a> </li>
                             <li *ngFor="let c of categories"  [class.active]="category == c.name"> 
                                 <a routerLink="/product" [queryParams]="{category:c.name}" title="" class="content-justify">
                               <span>{{c.name}}</span><span></span>

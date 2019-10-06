@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
+import 'rxjs/add/operator/take'; 
+import 'rxjs/add/operator/map'; 
+// import { map } from 'rxjs'
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   private categories=[
     {name:'Hinges'},
@@ -173,16 +177,22 @@ export class ProductService {
   ]
    
   getCategories(){
+    // console.log(this.http.get('categories'));
     return this.categories;
   }
 
   getProducts(){
-    return this.products;
+   return this.http.get('assets/data/data.json')
+   
   }
 
   getProduct(value){
-    console.log(this.products[value])
-   return this.products[value];
+    // console.log(this.products[value])
+    // this.http.get('products[value]').subscribe(p=>{console.log(p)});
+
+   return this.products.filter(p=>{
+    return p.name.includes(value)
+   });
   }
 
 }

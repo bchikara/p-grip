@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from './../Service/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
 declare var jQuery:any
+import 'rxjs/add/operator/switchMap'
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -22,11 +24,13 @@ export class ProductComponent implements OnInit {
     this.categories = this.productService.getCategories()
     // console.log(this.categories);
 
-   this.filteredProducts=this.products = this.productService.getProducts();
-    // console.log(this.products);
-
-    this.route.queryParams.subscribe(p=>{this.category=p.category
-      console.log(this.category)
+   this.productService.getProducts().switchMap( product => {
+     this.filteredProducts = product['products']
+     return this.route.queryParamMap
+   })
+    .subscribe(params=>{
+      this.category=params.get('category')
+      this.applyFilter();
     })
 
     
@@ -1239,20 +1243,27 @@ export class ProductComponent implements OnInit {
       
     });
      //end of IIFE function
-    
-   
-    
-        
+          
   }
   
-  filter(query: string) {
+    filter(query: string) {
     let q = query.toLowerCase();
     this.products = this.filteredProducts;
     this.products = (query) ?
-      this.products.filter(p => p.name.toLowerCase().includes(q)) : this.filteredProducts;
+    this.products.filter(p => p.name.toLowerCase().includes(q)) : this.filteredProducts;
     }
 
     clearQuery(){
-      this.router.navigate(['/product'])
-     }
+     this.router.navigate(['/product'])
+    }
+
+    private applyFilter() { 
+      this.products = (this.category) ? 
+      this.filteredProducts.filter(p =>{ 
+        console.log(p.category == this.category)
+        return p.category==this.category;
+      }) : 
+      this.filteredProducts;
+    }
+
 }

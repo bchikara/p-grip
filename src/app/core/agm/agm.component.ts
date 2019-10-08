@@ -24,8 +24,8 @@ export class AgmComponent implements OnInit {
   }
  
   
-  markerDragEnd(m: Marker, $event: MouseEvent) {
-    console.log('dragEnd', m, $event);
+  markerDragEnd($event: MouseEvent) {
+    console.log('dragEnd', $event);
   }
   
   labelOptions = {

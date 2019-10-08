@@ -16,6 +16,7 @@ export class ProductComponent implements OnInit {
   category;
   products;
   filteredProducts;
+  p;
   
   constructor(private productService:ProductService, private router:Router,
     private route:ActivatedRoute) { 

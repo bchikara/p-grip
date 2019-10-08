@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { TeamComponent } from './team/team.component';
 import { ProductModule } from './product/product.module';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ProductModule } from './product/product.module';
     BrowserModule,
     AppRoutingModule,
     CoreModule,
-    ProductModule
+    ProductModule,
+    Ng4LoadingSpinnerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

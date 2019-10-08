@@ -11,18 +11,23 @@ declare var jQuery:any;
 export class ProductDetailsComponent implements OnInit {
   productId;
   product;
-
+  products;
   constructor(private route:ActivatedRoute,private productService:ProductService) { }
 
   ngOnInit() {
     
     this.route.queryParamMap.subscribe(p=>{this.productId=p.get('value')});
     console.log(this.productId)
-    this.product=this.productService.getProduct(this.productId);
-    console.log(this.product[0].name)
+    this.productService.getProduct(this.productId).subscribe(p=>{
+      this.products=p['products']
+     this.product=this.products.filter(p=>{
+       return p.name.includes(this.productId);
+      })
+    });
+      
+    // console.log(this.product[0].name)
     "use strict";
     //Wrapping all JavaScript code into a IIFE function for prevent global variables creation
-    
     
     var $body = jQuery('body');
     var $window = jQuery(window);

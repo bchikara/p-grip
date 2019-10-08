@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './../Service/product.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 declare var jQuery:any
 import 'rxjs/add/operator/switchMap'
 

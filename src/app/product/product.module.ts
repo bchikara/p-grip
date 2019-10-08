@@ -5,6 +5,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     CoreModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ]
 })
 export class ProductModule { }

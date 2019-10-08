@@ -15,14 +15,14 @@
             </div>
         </div>
     </section>
-    <section class="ls section_padding_top_130 section_padding_bottom_130 columns_padding_25">
+    <section *ngIf="product" class="ls section_padding_top_130 section_padding_bottom_130 columns_padding_25">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div itemscope="" itemtype="http://schema.org/Product" class="product type-product row columns_padding_25">
                         <div class="col-sm-6">
-                            <div class="item-media images muted_background text-center rounded overflow_hidden"> <a href="assets/images/shop/04.png" itemprop="image" class="woocommerce-main-image zoom prettyPhoto" data-gal="prettyPhoto[product-gallery]">
-                        <img src="assets/images/shop/04.png" class="attachment-shop_single wp-post-image" alt="" title="">
+                            <div class="muted_background text-center rounded overflow_hidden"> <a href="{{product[0].image}}" itemprop="image" class="woocommerce-main-image zoom prettyPhoto" data-gal="prettyPhoto[product-gallery]">
+                        <img height="100%" width="100%" src="{{product[0].image}}" class="attachment-shop_single wp-post-image" alt="" title="">
                     </a>
                                 <div class="entry-meta-corner main_bg_color"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                             </div>
@@ -41,7 +41,7 @@
                         </div>
                         <div class="summary entry-summary col-sm-6">
                             <div class="content-justify vertical-center">
-                                <div class="small-text big highlight2links"> <a href="#">Drills</a> </div>
+                                <div class="small-text big highlight2links"> <a href="#">{{product[0].category}}</a> </div>
                                 <div>
                                     <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
                                 <strong class="rating">4.00</strong> out of 5
@@ -50,8 +50,7 @@
                             </div>
                             <h1 itemprop="name" class="product_title text-uppercase topmargin_0">{{product[0].name}}</h1>
                             <div>
-                                <p>Capicola jerky tongue, burgdoggen drumstick chuck ground round picanha beef bacon ribeye leberkas. Turkey ham andouille strip steak burgdoggen beef ribs. Capicola tenderloin salami chuck cupim turducken, doner pig ribeye meatball hamburger prosciutto.
-                                    </p>
+                                <p>{{product[0].description}} </p>
                             </div>
                             <div class="row product_meta small-text big greylinks">
                                 <div class="col-sm-6"> <span class="posted_in">
@@ -68,10 +67,10 @@
                             </div>
                             <hr class="divider_30">
                             <ul class="list2 color3 checklist">
-                                    <li>Brisket doner meatloaf turducke</li>
-                                    <li>Pancetta landjaeger alcatra groun</li>
-                                    <li>Round pork turkey boudin shank</li>
-                                    <li>Round pork turkey boudin shank</li>
+                                    <li><img src="assets/images/ce.png" alt=""></li>
+                                    <li><img src="assets/images/rohs.jpg" alt=""></li>
+                                    <li>Different Categories Available</li>
+                                    <li>Quality Assured Product</li>
                                 </ul>
 
                             <!-- <form class="cart topmargin_50" method="post" enctype="multipart/form-data">

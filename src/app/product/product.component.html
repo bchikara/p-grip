@@ -51,13 +51,13 @@
                 </div>
                 <div class="columns-2">
                     <ul id="products" class="products list-unstyled grid-view bottommargin_0">
-                       <div *ngFor="let product of products;let i=index">
+                       <div *ngFor="let product of products | paginate:{itemsPerPage: 10, currentPage:p} ; let i=index;">
                            <li *ngIf="(i%2==0)" class="product type-product">
                                <div class="side-item no-content-padding with_border content-padding">
                                    <div class="row">
                                        <div class="col-md-5">
                                            <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
-                                       <img src="assets/images/shop/01.png" alt="">
+                                       <img src="{{product.image}}" alt="">
                                    </a>
                                                <div class="entry-meta-corner main_bg_color2"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
@@ -71,7 +71,8 @@
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>                                     
+                                               <!-- <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>                                      -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                        <div class="col-md-7">
@@ -85,8 +86,8 @@
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10 hover-color2"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>
-                                               
+                                               <!-- <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                    </div>
@@ -97,7 +98,7 @@
                                    <div class="row">
                                        <div class="col-md-5">
                                            <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
-                                       <img src="assets/images/shop/02.png" alt="">
+                                       <img src="{{product.image}}" alt="">
                                    </a>
                                                <div class="entry-meta-corner main_bg_color"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
@@ -105,14 +106,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlightlinks"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:60%">
-                                                   <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                                       
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                                               
+                                               <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                        <div class="col-md-7">
@@ -120,14 +119,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlightlinks"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:60%">
-                                                   <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                                       
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                                               
+                                               <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                    </div>
@@ -138,7 +135,7 @@
                                    <div class="row">
                                        <div class="col-md-5">
                                            <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
-                                       <img src="assets/images/shop/03.png" alt="">
+                                       <img src="{{product.image}}" alt="">
                                    </a>
                                                <div class="entry-meta-corner main_bg_color3"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
@@ -152,8 +149,8 @@
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                                               
+                                               <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                        <div class="col-md-7">
@@ -167,8 +164,8 @@
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10 hover-color3"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                                               
+                                               <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                    </div>
@@ -179,7 +176,7 @@
                                    <div class="row">
                                        <div class="col-md-5">
                                            <div class="item-media muted_background rounded overflow_hidden"> <a routerLink="/product-details" [queryParams]="{value:product.name}">
-                                       <img src="assets/images/shop/04.png" alt="">
+                                       <img src="{{product.image}}" alt="">
                                    </a>
                                                <div class="entry-meta-corner main_bg_color6"> <span class="value"></span> <span class="small-text big-spacing">inr</span> </div>
                                            </div>
@@ -187,14 +184,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlight6links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:40%">
-                                                   <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                                       
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                                               
+                                               <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                        <div class="col-md-7">
@@ -202,14 +197,12 @@
                                                <div class="content-justify">
                                                    <div class="small-text big highlight6links"> <a>{{product.category}}</a> </div>
                                                    <div>
-                                                       <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:40%">
-                                                   <strong class="rating">4.00</strong> out of 5
-                                               </span> </div>
+                                                       
                                                    </div>
                                                </div>
                                                <h4 class="entry-title topmargin_10 hover-color6"> <a routerLink="/product-details" [queryParams]="{value:product.name}">{{product.name}}</a> </h4>
-                                               <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p>
-                                               
+                                               <!-- <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.</p> -->
+                                               <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                            </div>
                                        </div>
                                    </div>
@@ -219,7 +212,11 @@
                     </ul>
                 </div>
                 <!-- eof .columns-* -->
-                
+                <div class="row topmargin_20">
+                        <div class="col-sm-12 text-center">
+                                <pagination-controls (pageChange)="p=$event"></pagination-controls>
+                        </div>
+                    </div>
             </div>
             
             <!--eof .col-sm-8 (main content)-->

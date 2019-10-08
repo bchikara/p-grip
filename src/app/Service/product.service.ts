@@ -25,6 +25,7 @@ export class ProductService {
     {name:'Slide Lock Fuse'},
     {name:'Close Type Strip'},
     {name:'Nylon Cable Tie'},
+    {name:'Tie Mount'},
     {name:'PG Glande'},
     {name:'Insulator'},
     {name:'Cable Binding Strap, Button & Sandle Clip'},
@@ -178,6 +179,9 @@ export class ProductService {
    
   getCategories(){
     // console.log(this.http.get('categories'));
+    // var categories;
+    // this.http.get('assets/data/data.json').subscribe(p=>{categories=p['categories']})
+    // console.log(categories);
     return this.categories;
   }
 
@@ -189,10 +193,7 @@ export class ProductService {
   getProduct(value){
     // console.log(this.products[value])
     // this.http.get('products[value]').subscribe(p=>{console.log(p)});
-
-   return this.products.filter(p=>{
-    return p.name.includes(value)
-   });
+     return this.http.get('assets/data/data.json')
   }
 
 }

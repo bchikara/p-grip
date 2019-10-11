@@ -27,8 +27,9 @@ export class ProductComponent implements OnInit {
     this.categories = this.productService.getCategories()
     // console.log(this.categories);
 
-   this.productService.getProducts().switchMap( product => {
-     this.filteredProducts = product['products']
+   this.productService.getProducts().valueChanges().switchMap( product => {
+     this.filteredProducts = product
+     console.log(product)
      return this.route.queryParamMap
    })
     .subscribe(params=>{

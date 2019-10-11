@@ -3,13 +3,14 @@ import { HttpClient } from '@angular/common/http';
 
 import 'rxjs/add/operator/take'; 
 import 'rxjs/add/operator/map'; 
+import { AngularFireDatabase } from '@angular/fire/database';
 // import { map } from 'rxjs'
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private db:AngularFireDatabase) { }
 
   private categories=[
     {name:'Hinges'},
@@ -178,22 +179,18 @@ export class ProductService {
   ]
    
   getCategories(){
-    // console.log(this.http.get('categories'));
-    // var categories;
-    // this.http.get('assets/data/data.json').subscribe(p=>{categories=p['categories']})
-    // console.log(categories);
     return this.categories;
   }
 
   getProducts(){
-   return this.http.get('assets/data/data.json')
-   
+    return this.db.list('/products');
   }
 
   getProduct(value){
-    // console.log(this.products[value])
-    // this.http.get('products[value]').subscribe(p=>{console.log(p)});
-     return this.http.get('assets/data/data.json')
+    return this.db.object('/products/' + value);
   }
 
+  addProduct(value){
+     return this.db.list('/products').push(value);
+  }
 }

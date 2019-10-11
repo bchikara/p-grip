@@ -10,24 +10,16 @@ import { Subscription } from 'rxjs';
 export class ManageProductComponent implements OnInit {
 
   products;
-  subscription: Subscription;
-   
+  subscription: Subscription;  
 
-  constructor(private productService: ProductService) { 
-    this.subscription = this.productService.getProducts()
-      .subscribe(products => {
-        this.products = products['products'];
-        // this.initializeTable(products);
-      });
+  constructor(){}
+
+  ngOnInit() {
   }
-
- 
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
 
-  ngOnInit() {
-  }
 
 }

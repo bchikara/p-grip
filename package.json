@@ -23,6 +23,7 @@
     "@angular/router": "~8.2.5",
     "firebase": "^7.1.0",
     "ng-angular8-datatable": "^0.9.11",
+    "ng-block-ui": "^2.1.7",
     "ng4-loading-spinner": "^1.2.3",
     "ngx-pagination": "^4.1.0",
     "rxjs": "~6.4.0",

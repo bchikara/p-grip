@@ -18,8 +18,8 @@ export class ProductDetailsComponent implements OnInit {
     
     this.route.queryParamMap.subscribe(p=>{this.productId=p.get('value')});
     console.log(this.productId)
-    this.productService.getProduct(this.productId).subscribe(p=>{
-      this.products=p['products']
+    this.productService.getProducts().valueChanges().subscribe(p=>{
+      this.products=p
      this.product=this.products.filter(p=>{
        return p.name.includes(this.productId);
       })

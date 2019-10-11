@@ -23,14 +23,14 @@ const routes: Routes = [
   {path:'faq',component:FaqComponent},
   {path:'contact',component:ContactComponent},
   {path:'about',component:AboutComponent},
-  {path:'login',component:LoginComponent},
+  // {path:'login',component:LoginComponent},
   {path:'addProduct',component:AddProductComponent},
-  {path:'manageProduct',component:ManageProductComponent},
+  // {path:'manageProduct',component:ManageProductComponent},
   {path:'**',component:NotFoundComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes,{useHash:true})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

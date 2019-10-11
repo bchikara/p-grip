@@ -17,6 +17,12 @@ import { AddProductComponent } from './admin/add-product/add-product.component';
 import { ManageProductComponent } from './admin/manage-product/manage-product.component';
 import { DataTableModule } from 'ng-angular8-datatable';
 import {FormsModule } from '@angular/forms';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
+import { BlockUIModule } from 'ng-block-ui';
+import { BlockComponent } from './block/block.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +35,8 @@ import {FormsModule } from '@angular/forms';
     TeamComponent,
     LoginComponent,
     AddProductComponent,
-    ManageProductComponent
+    ManageProductComponent,
+    BlockComponent
   ],
   imports: [
     BrowserModule,
@@ -38,8 +45,16 @@ import {FormsModule } from '@angular/forms';
     ProductModule,
     Ng4LoadingSpinnerModule.forRoot(),
     DataTableModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    BlockUIModule.forRoot(
+      {
+        template:BlockComponent
+      }
+    )
   ],
+  entryComponents: [ BlockComponent ],
   providers: [],
   bootstrap: [AppComponent]
 })

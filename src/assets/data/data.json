@@ -112,7 +112,7 @@
     {"name":"Feerule Marking Sleeve","category":"Sleeve","image":"assets/images/ferrule.png","description":"Material - PVC","price":""},
     {"name":"Ink Ribbon","category":"Ink Ribbon & Lable","image":"assets/images/inkRibbon.jpg","description":"Material - Thread","price":""},
     {"name":"Self Adhesive Lable","category":"Ink Ribbon & Lable","image":"assets/images/selfLabel.jpg","description":"Material - Plastic","price":""},
-    {"name":"PVC Wiring Channel","category":"PVC Channel","image":"assets/images/pvcChannel.png","description":"","price":"Material – MS with White Zinc Plating <br> Available both in Perforated & Un-perforated <br> Available Colors: White (Yellow On Request) <br> Available Length – 1 Mtr (Other Lengths on request )"},
+    {"name":"PVC Wiring Channel","category":"PVC channel","image":"assets/images/pvcChannel.png","description":"Material – MS with White Zinc Plating <br> Available both in Perforated & Un-perforated <br> Available Colors: White (Yellow On Request) <br> Available Length – 1 Mtr (Other Lengths on request )","price":""},
     {"name":"Screw Knobs","category":"Doorknob & Hardware","image":"assets/images/screwKnow.png","description":"Material – Pointed MS Bolt with Nylon Knob","price":""},
     {"name":"Eye Bolts","category":"Doorknob & Hardware","image":"assets/images/eyeBolt.jpg","description":"Material – Pointed MS Bolt with Nylon Knob <br> Supplied with Two Mounting Washers","price":""},
     {"name":"Rubber Grommets","category":"Grommets","image":"assets/images/snapFitGrommet.jpg","description":"Material – Engineered Plastics <br> Suitability: Compatible for both 1.5/2mm sheet <br> Colour – RAL 7035 (Other Colour on request) <br> Compliance- IP54","price":""},

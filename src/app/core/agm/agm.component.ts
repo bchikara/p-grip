@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Marker } from '@agm/core/services/google-maps-types';
 
 @Component({
   selector: 'app-agm',

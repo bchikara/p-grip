@@ -51,7 +51,7 @@
                 </div>
                 <div class="columns-2">
                     <ul id="products" class="products list-unstyled grid-view bottommargin_0">
-                       <div *ngFor="let product of products | paginate:{itemsPerPage: 10, currentPage:p} ; let i=index;">
+                       <div *ngFor="let product of products | paginate:{itemsPerPage: 10, currentPage:p} ; let i=index; trackBy: trackByFn">
                            <li *ngIf="(i%2==0)" class="product type-product">
                                <div class="side-item no-content-padding with_border content-padding">
                                    <div class="row">
@@ -65,13 +65,9 @@
                                             <div class="content-justify">
                                                 <div class="small-text big highlight2links"> <a>{{product.category}}</a> </div>
                                                 <div>
-                                                    <!-- <div class="star-rating right-rating" title="Rated 4.00 out of 5"> <span style="width:80%">
-                                                <strong class="rating">4.00</strong> out of 5
-                                            </span> </div> -->
                                                 </div>
                                             </div>
                                             <h4 class="entry-title topmargin_10 hover-color2"> <a >{{product.name}}</a> </h4>
-                                            <!-- <p>Frankfurter cupim rump burgdoggen. Pork ham hock beef ribs pancetta prosciutto sirloin filet mignon.</p>                                      -->
                                             <p>Certification:</p> <img src="assets/images/ce.png" alt=""> &nbsp; <img src="assets/images/rohs.jpg" alt="">
                                         </div>
                                     </div>

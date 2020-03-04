@@ -1249,6 +1249,10 @@ export class ProductComponent implements OnInit {
      //end of IIFE function
           
   }
+
+  trackByFn(index, item) {
+    return index; // or item.id
+  }
   
     filter(query: string) {
     let q = query.toLowerCase();

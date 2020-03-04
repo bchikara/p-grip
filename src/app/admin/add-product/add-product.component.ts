@@ -85,7 +85,6 @@ export class AddProductComponent implements OnInit {
     if(product.description!==undefined){
       this.ps.addProduct(product).then(p=>{
         console.log(p)   
-
         setTimeout(()=>{
           this.spinnerService.hide();
           this.router.navigate(['/product'])

@@ -23,16 +23,15 @@ export class ProductComponent implements OnInit {
   }
   
   ngOnInit() {
-
+    
     this.categories = this.productService.getCategories()
     // console.log(this.categories);
 
-   this.productService.getProducts().valueChanges().switchMap( product => {
+    this.productService.getProducts().valueChanges().switchMap( product => {
      this.filteredProducts = product
      console.log(product)
      return this.route.queryParamMap
-   })
-    .subscribe(params=>{
+    }).subscribe(params=>{
       this.category=params.get('category')
       this.applyFilter();
     })

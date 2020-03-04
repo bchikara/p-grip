@@ -32,7 +32,7 @@
             </div>
             <div *ngIf="categories" class="form-group">
               <label id="Category" for="type">Category</label>
-              <select #category="ngModel" [(ngModel)]="product.category" name="type" id="Category" class="form-control"
+              <select #category="ngModel" [(ngModel)]="product.category"  name="type" id="Category" class="form-control"
                 required>
                 <option value="">Select a category</option>
                
@@ -42,31 +42,52 @@
             </div>
             <div class="form-group">
               <label id="quantity" for="quantity">Image</label><br>
-              <span>Select Image of the Listing - &nbsp;</span>
+              <!-- <span>Select Image of the Listing - &nbsp;</span>
               <input style="display: none" type="file" (change)="onFileChanged($event)" #fileInput>
               <button (click)="fileInput.click()" type="button" class="theme_button wide_button color1 topmargin_40 fa fa-paperclip">Select
                 File</button>&nbsp;&nbsp;&nbsp;
               <p *ngIf="selectedFile">{{selectedFile.name}}</p>
               <p *ngIf="type" style="color:red">Type of image should be of (.jpg)</p>
-              <p *ngIf="size" style="color:red">Image size should be less than 1MB</p>
+              <p *ngIf="size" style="color:red">Image size should be less than 1MB</p> -->
+              <input type="text" class="form-control" #image="ngModel" [(ngModel)]="product.image" name="image" id="image">
             </div>
             <div class="form-group">
               <label id="desc" for="">Product Description</label>
               <textarea #productName="ngModel" type="text" [(ngModel)]="product.description" id="desc" name="description"
                 class="form-control" required></textarea>
             </div>
-            <button class="theme_button wide_button color1 topmargin_40" [disabled]="!f.valid || !res">Add Product</button>&nbsp;&nbsp;&nbsp;
+            <div class="form-group">
+              <ng-template matStepLabel>Add the options</ng-template>
+
+                <form [formGroup]="myForm" novalidate>
+
+                    <div formArrayName="options">
+                        <label id="Category" for="type">Sub-Category Name</label>
+                        <div *ngFor="let language of myForm.controls.options.controls; let i=index" class="panel panel-default">
+                            <div class="example-full-width" [formGroupName]="i">
+                                <input id="type{{i+1}}" name="type{{i+1}}" class="form-control" placeholder="Sub-Type"  formControlName="choice" >
+                            </div> &nbsp;&nbsp;
+                            <button *ngIf="myForm.controls.options.controls.length > 1" mat-mini-fab (click)="removeLanguage(i)"
+                                color="warn">-</button>
+
+                        </div>
+                    </div>
+                    <button mat-mini-fab (click)="addLanguage()" type="button" color="primary">+</button>
+                    
+                </form>
+            </div>
+            <button class="theme_button wide_button color1 topmargin_40" [disabled]="!f.valid">Add Product</button>&nbsp;&nbsp;&nbsp;
             <br> <br> <br>
           </div>
           <div class="col-md-5">
-            <div *ngIf="f.valid && res" class="item-media muted_background rounded overflow_hidden">
+            <div *ngIf="f.valid " class="item-media muted_background rounded overflow_hidden">
                <a >
                 <img src="{{product.image}}" alt="">
               </a>
               <div class="entry-meta-corner main_bg_color2"> <span class="value"></span> <span class="small-text big-spacing">inr</span>
               </div>
             </div>
-            <div  *ngIf="f.valid && res" style="height:250px" class="item-content text-center">
+            <div  *ngIf="f.valid " style="height:250px" class="item-content text-center">
               <div class="content-justify">
                 <div class="small-text big highlight2links"> <a>{{product.category}}</a> </div>
                 <div>

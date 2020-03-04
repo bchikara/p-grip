@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 import { AdminModule } from './admin/admin.module';
 import { ExtraModule } from './extra/extra.module';
 import { FacebookModule } from 'ngx-facebook';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,8 @@ import { FacebookModule } from 'ngx-facebook';
     Ng4LoadingSpinnerModule.forRoot(),
     AdminModule,
     ExtraModule,
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
